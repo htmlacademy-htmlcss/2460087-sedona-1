@@ -8,13 +8,13 @@
 
   <body>
     <header class="page-header">
-      <a href="#">
+      <a>
         <img src="#" class="logo" alt="Логотип города Седона со стилизованными горами на фоне неба">
       </a>
       <nav class="page-navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="#">Главная</a>
+            <a class="navigation-link navigation-link-current">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
@@ -39,7 +39,10 @@
       </nav>
     </header>
     <main class="main-index">
+      <section class="hero">
       <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
+      <img src="#" alt="Welcome to the gorgeous Sedona">
+      </section>
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
         <img src="#" alt="Улицы Седоны.">
@@ -96,9 +99,9 @@
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru" method="get">
-          <label>
+          <label for="email">
             Ваш e-mail
-            <input type="email" name="email" required>
+            <input type="email" name="email" id="email" required>
           </label>
           <button type="submit" class="subscribe-button">Подписаться</button>
         </form>
@@ -107,24 +110,24 @@
       <address class="footer-contacts">
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="footer-img" href="https://vk.com/htmlacademy">
+            <a class="footer-contacts-img" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-img" href="https://t.me/htmlacademy">
+            <a class="footer-contacts-img" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-img" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="footer-contacts-img" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
         </ul>
         <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
-      <a class="footer-img" href="https://htmlacademy.ru/">
+      <a class="footer-contacts-img" href="https://htmlacademy.ru/">
         <span class="visually-hidden">Сделано в .html academy</span>
       </a>
     </footer>
