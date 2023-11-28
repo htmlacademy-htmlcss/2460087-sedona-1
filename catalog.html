@@ -24,6 +24,7 @@
             <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
           </li>
         </ul>
+        </nav>
         <nav class="user-navigation">
           <ul class="user-navigation-list">
             <li class="user-navigation-item">
@@ -99,11 +100,11 @@
               </li>
             </ul>
           </fieldset>
-          <label for="price">
+          <label for="price-from">
             от:
             <input type="number" name="from" value="0" id="price-from" min="0">
           </label>
-          <label>
+          <label for="price-to">
             до:
             <input type="number" name="to" value="9000" id="price-to" max="9000">
           </label>
@@ -155,7 +156,7 @@
             <p class="hotel-card-price">от 5000 ₽</p>
             <a class="hotel-card-button button" href="#">Подробнее</a>
             <button class="hotel-card-favorites-button hotel-card-favorites-selected-button button" type="button">В избранном</button>
-            <p class="visually-hidden">Количество звёзд</з>
+            <p class="visually-hidden">Количество звёзд</p>
             <p class="hotel-card-rating"> Рейтинг: 9,2</p>
           </li>
           <li class="hotel-card-item">
@@ -180,7 +181,7 @@
             <a class="hotel-card-button button" href="#">Подробнее</a>
             <button class="hotel-card-favorites-button button" type="button">В избранное</button>
             <p class="visually-hidden">Количество звёзд</p>
-            <p class="hotel-card-rating"></p>Рейтинг: 5,0</p>
+            <p class="hotel-card-rating">Рейтинг: 5,0</p>
           </li>
         </ul>
         <ul class="pagination">
@@ -217,8 +218,8 @@
       </section>
     </main>
     <footer class="page-footer">
-      <h2 class="visually-hidden">Контакты</h2>
       <section class="footer-social">
+        <h2 class="visually-hidden">Контакты</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="footer-contacts-img" href="https://vk.com/htmlacademy">
