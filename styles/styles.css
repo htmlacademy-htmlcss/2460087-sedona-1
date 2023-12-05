@@ -9,8 +9,8 @@
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -42,9 +42,27 @@ background-color: #756157;
   font-size: 20px;
 }
 
-/* Pages */
+/* Text */
 
-/*Navigation*/
+.title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #333333;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* PAGES */
+
+/* Navigation */
 .navigation-link {
   font-size: 20px;
   line-height: 24px;
@@ -68,3 +86,5 @@ height: 485px;
 background-size: 100% auto;
 background-repeat: no-repeat;
 }
+
+/*Advantages*/
