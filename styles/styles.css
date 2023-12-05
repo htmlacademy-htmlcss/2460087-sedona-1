@@ -22,22 +22,7 @@ body {
   background-color: #ffffff;
 }
 
-/* LINK */
-
-.navigation-link {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #000000;
-  text-align:center;
-  text-decoration:none;
-}
-
-.navigation-link-current {
-  text-decoration-line: underline;
-}
-
-/* BUTTON */
+/* Button */
 
 .button {
   background-color: #82b3d3;
@@ -55,4 +40,31 @@ background-color: #756157;
 
 .form-button {
   font-size: 20px;
+}
+
+/* Pages */
+
+/*Navigation*/
+.navigation-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-align:center;
+  text-decoration:none;
+}
+
+.navigation-link-current {
+  text-decoration-line: underline;
+}
+
+/*Hero*/
+
+.hero {
+background-color: #83B3D3;
+background-image: url(../images/decorative/hero/background.jpg);
+width: 1200px;
+height: 485px;
+background-size: 100% auto;
+background-repeat: no-repeat;
 }
