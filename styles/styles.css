@@ -18,4 +18,41 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  color: 000000;
+  background-color: #ffffff;
+}
+
+/* LINK */
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-align:center;
+  text-decoration:none;
+}
+
+.navigation-link-current {
+  text-decoration-line: underline;
+}
+
+/* BUTTON */
+
+.button {
+  background-color: #82b3d3;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align:center;
+  text-transform: uppercase;
+  border: none;
+}
+
+.booking-button {
+background-color: #756157;
+}
+
+.form-button {
+  font-size: 20px;
 }
