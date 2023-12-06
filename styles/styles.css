@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   color: #333333;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -56,7 +56,6 @@ background-color: #756157;
 .subtitle {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
   text-align: center;
 }
 
@@ -68,9 +67,12 @@ background-color: #756157;
   text-transform: uppercase;
   }
 
-/* PAGES */
+  /* HEADER */
+  .page-header {
+    background-color: #ffffff;
+  }
 
-/* Navigation */
+  /* Navigation */
 
 .navigation-link {
   color: #000000;
@@ -78,12 +80,15 @@ background-color: #756157;
   line-height: 24px;
   font-weight: 700;
   text-align: center;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .navigation-link-current {
   text-decoration-line: underline;
 }
+
+
+/* PAGES */
 
 /* Hero */
 
@@ -97,6 +102,10 @@ background-color: #756157;
 }
 
 /*Advantages*/
+
+.advantages {
+  background-color: #ffffff;
+}
 
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.12);
@@ -120,6 +129,10 @@ background-color: #756157;
 
 /* Service */
 
+.service {
+  background-color: #ffffff;
+}
+
 .service-item {
   background-color: rgba(131, 179, 211, 0.12);
   text-align: center;
@@ -128,6 +141,12 @@ background-color: #756157;
 .service-item-food {
   background-color: #ffffff;
   text-align: center;
+}
+
+/* Booking */
+
+.booking {
+  background-color: #ffffff;
 }
 
 /* Subscribe */
@@ -148,4 +167,19 @@ background-color: #756157;
 
 .subscribe-form {
   text-align: center;
+}
+
+/* FOOTER */
+
+.page-footer {
+  background-color: #ffffff;
+}
+
+.footer-phone {
+  color: #000000;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  text-decoration: none;
 }
