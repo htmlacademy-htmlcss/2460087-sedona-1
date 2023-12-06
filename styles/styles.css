@@ -129,3 +129,23 @@ background-color: #756157;
   background-color: #ffffff;
   text-align: center;
 }
+
+/* Subscribe */
+
+.subscribe {
+  background-color: #82b3d3;
+  background-image: url(../images/decorative/subscribe.jpg);
+  color: #ffffff;
+  width: 1200px;
+  height: 414.86px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.subscribe-title {
+  color: #ffffff;
+}
+
+.subscribe-form {
+  text-align: center;
+}
