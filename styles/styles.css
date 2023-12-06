@@ -15,20 +15,20 @@
 }
 
 body {
+  background-color: #ffffff;
+  color: #333333;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  color: 000000;
-  background-color: #ffffff;
 }
 
 /* Button */
 
 .button {
   background-color: #82b3d3;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 700;
-  color: #ffffff;
   text-align:center;
   text-transform: uppercase;
   border: none;
@@ -45,6 +45,7 @@ background-color: #756157;
 /* Text */
 
 .title {
+  color: #000000;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -53,22 +54,29 @@ background-color: #756157;
 }
 
 .subtitle {
-  color: #333333;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
   text-align: center;
 }
 
+.features-title {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  }
+
 /* PAGES */
 
 /* Navigation */
 .navigation-link {
+  color: #000000;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  color: #000000;
-  text-align:center;
+  text-align: center;
   text-decoration:none;
 }
 
@@ -79,12 +87,33 @@ background-color: #756157;
 /*Hero*/
 
 .hero {
-background-color: #83B3D3;
-background-image: url(../images/decorative/hero/background.jpg);
-width: 1200px;
-height: 485px;
-background-size: 100% auto;
-background-repeat: no-repeat;
+  background-color: #83B3D3;
+  background-image: url(../images/decorative/hero/background.jpg);
+  width: 1200px;
+  height: 485px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 /*Advantages*/
+
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.12);
+  text-align: center;
+  color: #000000;
+}
+
+.advantages-item-town,
+.advantages-item-bridge {
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+
+.advantages-title-town,
+.advantages-title-bridge {
+  color: #ffffff;
+}
+
+.advantages-item-road {
+  background-color: rgba(131, 179, 211, 0.2);
+}
