@@ -174,11 +174,24 @@ background-color: #756157;
 
 /* Inner Header */
 
+.filter-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.filter-form input,
+.filter-form select,
+.filter-form button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .inner-header {
   background-color: #82b3d3;
   color: #ffffff;
   background-image: url(../images/decorative/filter/background.jpg);
-/* Временно чтобы блоки не наезжали друг на друга
+/* Временно отключила чтобы блоки не наезжали друг на друга
   width: 1200px;
   height: 412px;  */
   background-size: 100% auto;
