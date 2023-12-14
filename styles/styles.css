@@ -157,7 +157,6 @@ text-decoration: none;
 .booking {
   background-color: var(--main-color);
 }
-
 /* Subscribe */
 
 .subscribe {
@@ -179,6 +178,12 @@ text-decoration: none;
 .input-field {
   font: inherit;
   color: #000000;
+}
+
+.inner-subscribe {
+  background-image: none;
+  background-color: var(--main-color);
+  color: inherit;
 }
 
 /* Inner Header */
@@ -234,7 +239,7 @@ line-height: 23px;
   background-color: var(--main-color);
 }
 
-.search, .title {
+.search, .search .title {
   text-align: left;
 }
 
