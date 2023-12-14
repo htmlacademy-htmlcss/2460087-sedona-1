@@ -45,7 +45,6 @@ body {
 }
 
 
-
 /* Button */
 
 .button {
@@ -61,6 +60,7 @@ body {
 
 .booking-button {
 background-color: #756157;
+text-decoration: none;
 }
 
 .form-button {
@@ -69,6 +69,10 @@ background-color: #756157;
 
 .reset-button {
   background-color: transparent;
+}
+
+.selected-button {
+  background-color: #7db54f;
 }
 
 /* Text */
@@ -223,6 +227,32 @@ line-height: 23px;
   color: #000000;
   line-height: 24px;
   font-weight: 700;
+}
+
+/* Hotel card */
+.hotel-card {
+  background-color: var(--main-color);
+}
+
+.search, .title {
+  text-align: left;
+}
+
+ .select-control {
+  font: inherit;
+ }
+
+.hotel-card-title {
+color: #000000;
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+}
+
+.hotel-card-rating {
+font-size: 16px;
+line-height: 20px;
+text-transform: uppercase;
 }
 
 /* FOOTER */
