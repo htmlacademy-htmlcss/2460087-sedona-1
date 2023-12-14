@@ -101,12 +101,12 @@
             </ul>
           </fieldset>
           <label for="price-from">
-            от:
-            <input type="number" name="from" value="0" id="price-from" min="0">
+            <span class="interval">от:</span>
+            <input class="price" type="number" name="from" value="0" id="price-from" min="0">
           </label>
           <label for="price-to">
-            до:
-            <input type="number" name="to" value="9000" id="price-to">
+            <span class="interval">до:</span>
+            <input class="price" type="number" name="to" value="9000" id="price-to">
           </label>
           <button class="button" type="submit">Применить</button>
           <button class="button reset-button" type="reset">Сбросить</button>
@@ -142,7 +142,7 @@
             <a class="button booking-button" href="#">Подробнее</a>
             <button class="button" type="button">В избранное</button>
             <p class="visually-hidden">Количество звёзд</p>
-            <p class="hotel-card-rating">Рейтинг: 8,5</p>
+            <p class="hotel-card-rating">4 звезды</p>
           </li>
           <li class="hotel-card-item">
             <img src="images/content/hotel-card/hotel-2.jpg" width="300" height="212" alt="Горы после дождя.">
@@ -151,7 +151,7 @@
             <p class="hotel-card-price">от 5000 ₽</p>
             <a class="button booking-button" href="#">Подробнее</a>
             <button class="button selected-button" type="button">В избранном</button>
-            <p class="visually-hidden">Количество звёзд</p>
+            <p class="visually-hidden">4 звезды</p>
             <p class="hotel-card-rating"> Рейтинг: 9,2</p>
           </li>
           <li class="hotel-card-item">
@@ -161,7 +161,7 @@
             <p class="hotel-card-price">от 2500 ₽</p>
             <a class="button booking-button" href="#">Подробнее</a>
             <button class="button" type="button">В избранное</button>
-            <p class="visually-hidden">Количество звёзд</p>
+            <p class="visually-hidden">3 звезды</p>
               <p class="hotel-card-rating">Рейтинг: 6,9</p>
           </li>
           <li class="hotel-card-item">
@@ -171,7 +171,7 @@
             <p class="hotel-card-price">от 1500 ₽</p>
             <a class="button booking-button" href="#">Подробнее</a>
             <button class="button" type="button">В избранное</button>
-            <p class="visually-hidden">Количество звёзд</p>
+            <p class="visually-hidden">2 звезды</p>
             <p class="hotel-card-rating">Рейтинг: 5,0</p>
           </li>
         </ul>
@@ -201,9 +201,9 @@
         <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="email">
-            Ваш e-mail
+            <span>Ваш e-mail</span>
           </label>
-            <input type="email" name="email" id="email" placeholder="Ваш e-mail" required>
+            <input class="input-field" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
           <button class="button form-button" type="submit">Подписаться</button>
         </form>
       </section>
