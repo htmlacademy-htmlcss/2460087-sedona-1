@@ -4,13 +4,13 @@
   <head>
     <meta charset="utf-8">
     <title>Гостиницы Седоны</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
     <header class="page-header">
       <a href="index.html">
-        <img class="logo" src="images/decorative/logo/main-logo.svg" width="138" height="64" alt="Логотип города Седона.">
+        <img class="logo" src="images/content/main-logo.svg" width="138" height="64" alt="Логотип города Седона.">
       </a>
       <nav class="page-navigation">
         <ul class="navigation-list">
@@ -28,10 +28,10 @@
         <nav class="user-navigation">
           <ul class="user-navigation-list">
             <li class="user-navigation-item">
-              <a href="#" class="user-navigation-link"><span class="visually-hidden">Поиск</span></a>
+              <a href="#" class="navigation-link user-navigation-link"><span class="visually-hidden">Поиск</span></a>
             </li>
             <li class="user-navigation-item">
-              <a class="user-navigation-link" href="#"><span class="visually-hidden">Избранное</span> 12</a>
+              <a class="navigation-link user-navigation-link" href="#"><span class="visually-hidden">Избранное</span> 12</a>
             </li>
             <li class="user-navigation-item">
               <button class="button booking-button" type="button">Хочу сюда!</button>
@@ -101,110 +101,118 @@
             </ul>
           </fieldset>
           <label for="price-from">
-            от:
-            <input type="number" name="from" value="0" id="price-from" min="0">
+            <span class="interval">от:</span>
+            <input class="price" type="number" name="from" value="0" id="price-from" min="0">
           </label>
           <label for="price-to">
-            до:
-            <input type="number" name="to" value="9000" id="price-to">
+            <span class="interval">до:</span>
+            <input class="price" type="number" name="to" value="9000" id="price-to">
           </label>
           <button class="button" type="submit">Применить</button>
           <button class="button reset-button" type="reset">Сбросить</button>
         </form>
       </header>
 
-      <section class="searching-results">
+      <section class="hotel-card">
+        <div class="searching-results">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <p class="search">Найдено гостиниц: <span>38</span></p>
+        <p class="search title">Найдено гостиниц: <span>38</span></p>
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
           <option value="rating">По рейтингу</option>
           <option value="location">По расположению</option>
         </select>
-        <button class="button button-light" type="button">
+        <button class="button-light" type="button">
           <span class="visually-hidden">Показать таблицу</span>
         </button>
-        <button class="button button-light" type="button">
+        <button class="button-light" type="button">
           <span class="visually-hidden">Показать карточки</span>
         </button>
-        <button class="button button-light" type="button">
+        <button class="button-light" type="button">
           <span class="visually-hidden">Показать список</span>
         </button>
-        </section>
-        <section class="hotel-card">
+      </div>
         <ul class="hotel-card-list">
           <li class="hotel-card-item">
-            <img src="images/content/hotel-card/hotel-1.jpg" width="300" height="212" alt="Вид изнутри ущелья.">
+            <a href="#">
+              <img src="images/content/hotel-card/hotel-1.jpg" width="300" height="212" alt="Вид изнутри ущелья.">
+            </a>
             <h3 class="hotel-card-title">Amara Resort & Spa</h3>
             <p class="hotel-card-type">Гостиница</p>
             <p class="hotel-card-price">от 4000 ₽</p>
             <a class="button booking-button" href="#">Подробнее</a>
             <button class="button" type="button">В избранное</button>
-            <p class="visually-hidden">Количество звёзд</p>
+            <p class="visually-hidden">4 звезды</p>
             <p class="hotel-card-rating">Рейтинг: 8,5</p>
           </li>
           <li class="hotel-card-item">
-            <img src="images/content/hotel-card/hotel-2.jpg" width="300" height="212" alt="Горы после дождя.">
+            <a href="#">
+              <img src="images/content/hotel-card/hotel-2.jpg" width="300" height="212" alt="Горы после дождя.">
+            </a>
             <h3 class="hotel">Villas at Poco Diablo</h3>
             <p class="hotel-card-type">Гостиница</p>
             <p class="hotel-card-price">от 5000 ₽</p>
             <a class="button booking-button" href="#">Подробнее</a>
             <button class="button selected-button" type="button">В избранном</button>
-            <p class="visually-hidden">Количество звёзд</p>
+            <p class="visually-hidden">4 звезды</p>
             <p class="hotel-card-rating"> Рейтинг: 9,2</p>
           </li>
           <li class="hotel-card-item">
-            <img src="images/content/hotel-card/hotel-3.jpg" width="300" height="212" alt="Горы на рассвете.">
+            <a href="#">
+              <img src="images/content/hotel-card/hotel-3.jpg" width="300" height="212" alt="Горы на рассвете.">
+            </a>
             <h3 class="hotel-card-title">Desert Quail Inn</h3>
             <p class="hotel-card-type">Гостиница</p>
             <p class="hotel-card-price">от 2500 ₽</p>
             <a class="button booking-button" href="#">Подробнее</a>
             <button class="button" type="button">В избранное</button>
-            <p class="visually-hidden">Количество звёзд</p>
+            <p class="visually-hidden">3 звезды</p>
               <p class="hotel-card-rating">Рейтинг: 6,9</p>
           </li>
           <li class="hotel-card-item">
+            <a href="#">
             <img src="images/content/hotel-card/hotel-4.jpg" width="300" height="212" alt="Горы ночью.">
+            </a>
             <h3 class="hotel-card-title">GreenTree Inn</h3>
             <p class="hotel-card-type">Гостиница</p>
             <p class="hotel-card-price">от 1500 ₽</p>
             <a class="button booking-button" href="#">Подробнее</a>
             <button class="button" type="button">В избранное</button>
-            <p class="visually-hidden">Количество звёзд</p>
+            <p class="visually-hidden">2 звезды</p>
             <p class="hotel-card-rating">Рейтинг: 5,0</p>
           </li>
         </ul>
-        <ul class="pagination">
+        <ol class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-current button" href="#">1</a>
+            <a class="pagination-link pagination-current-link" href="#">1</a>
           </li>
-          <li class="pagination-item button">
+          <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
           </li>
-          <li class="pagination-item button">
+          <li class="pagination-item">
             <a class="pagination-link" href="#">3</a>
           </li>
-          <li class="pagination-item button">
+          <li class="pagination-item">
             <a class="pagination-link" href="#">4</a>
           </li>
-          <li class="pagination-item button">
-          <span class="pagination-hidden-link">...</span>
+          <li class="pagination-item">
+          <span class="pagination-link pagination-hidden-link">...</span>
           </li>
-          <li class="pagination-item button">
+          <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
           </li>
-        </ul>
+        </ol>
       </section>
       <section class="subscribe inner-subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="title">Подпишитесь на рассылку</h2>
+        <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="email">
-            Ваш e-mail
+            <span>Ваш e-mail</span>
           </label>
-            <input type="email" name="email" id="email" placeholder="Ваш e-mail" required>
-          <button class="button" type="submit">Подписаться</button>
+            <input class="input-field" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
+          <button class="button form-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
