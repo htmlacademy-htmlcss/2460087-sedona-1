@@ -16,12 +16,32 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: #f2f2f2;
   color: #333333;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 1200px;
+  flex-grow: 1;
+}
+
+.inner-container {
+  margin: 0 auto;
+  width: 1200px;
+  flex-grow: 1;
 }
 
 :root {
@@ -56,11 +76,11 @@ body {
   text-align: center;
   text-transform: uppercase;
   border: none;
+  text-decoration: none;
 }
 
 .booking-button {
 background-color: #756157;
-text-decoration: none;
 }
 
 .form-button {
@@ -84,6 +104,7 @@ text-decoration: none;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .subtitle {
@@ -99,6 +120,27 @@ text-decoration: none;
 
   /* Navigation */
 
+.page-header {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 500px;
+}
+
+.user-navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 320px;
+  margin-left: auto ;
+}
+
 .navigation-link {
   color: #000000;
   font-size: 20px;
@@ -108,6 +150,15 @@ text-decoration: none;
   text-decoration: none;
 }
 
+.hotels-in-favorites {
+background-color: #7db54f;
+color: #ffffff;
+text-align: center;
+font-size: 10px;
+font-weight: 400;
+line-height: 10px;
+}
+
 /* PAGES */
 
 /* Hero */
@@ -115,8 +166,15 @@ text-decoration: none;
 .hero {
   background-color: var(--substrate-color);
   background-image: url("../images/decorative/hero/background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+
+.greetings {
+  display: block;
+  margin: 0 auto;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 /*Features*/
@@ -148,7 +206,7 @@ text-decoration: none;
   background-color: rgba(131, 179, 211, 0.20);
 }
 
-.service-item:not(.service-item-even) {
+.service-item:nth-child(odd) {
   background-color: var(--secondary-color);
 }
 
@@ -163,7 +221,7 @@ text-decoration: none;
   background-color: var(--substrate-color);
   background-image: url("../images/decorative/subscribe.jpg");
   color: #ffffff;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -192,7 +250,7 @@ text-decoration: none;
   background-color: var(--substrate-color);
   color: #ffffff;
   background-image: url("../images/decorative/filter/background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
