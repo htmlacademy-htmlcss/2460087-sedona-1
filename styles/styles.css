@@ -32,15 +32,17 @@ body {
   line-height: 21px;
 }
 
-.main-container {
+.container {
   margin: 0 auto;
+  flex-direction: column;
+  min-height: 100%;
+  display: flex;
   width: 1200px;
   flex-grow: 1;
+  background: #ffffff;
 }
 
-.inner-container {
-  margin: 0 auto;
-  width: 1200px;
+.main-index {
   flex-grow: 1;
 }
 
