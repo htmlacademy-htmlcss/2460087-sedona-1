@@ -9,37 +9,35 @@
 
   <body>
     <div class="main-container">
-    <header class="page-header">
-      <a href="index.html">
-        <img class="logo" src="images/content/main-logo.svg" width="138" height="64" alt="Логотип города Седона.">
-      </a>
-      <nav class="page-navigation">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
-          </li>
-        </ul>
-        </nav>
-        <nav class="user-navigation">
-          <ul class="user-navigation-list">
-            <li class="user-navigation-item">
-              <a href="#" class="navigation-link user-navigation-link"><span class="visually-hidden">Поиск</span></a>
+      <header class="page-header">
+        <a href="#">
+          <img class="logo" src="images/content/main-logo.svg" width="138" height="64" alt="Логотип города Седона.">
+        </a>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
             </li>
-            <li class="user-navigation-item">
-              <a class="navigation-link user-navigation-link" href="#"><span class="visually-hidden">Избранное</span> <span class="hotels-in-favorites">12</span></a>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">О Седоне</a>
             </li>
-            <li class="user-navigation-item">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Гостиницы</a>
+            </li>
+          </ul>
+          <ul class="navigation-list user-navigation-list">
+            <li class="navigation-item user-navigation-item">
+              <a class="navigation-link user-navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
+            </li>
+            <li class="navigation-item user-navigation-item">
+              <a class="navigation-link user-navigation-link" href="#"> <span class="visually-hidden">Избранное</span> <span class="hotels-in-favorites">12</span></a>
+            </li>
+            <li class="navigation-item user-navigation-item">
               <button class="button booking-button" type="button">Хочу сюда!</button>
             </li>
           </ul>
         </nav>
-    </header>
+      </header>
     <main class="main-inner">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -101,6 +99,7 @@
               </li>
             </ul>
           </fieldset>
+          <h2 class="catalog-filter-title">Стоимость, ₽:</h2>
           <label for="price-from">
             <span class="interval">от:</span>
             <input class="price" type="number" name="from" value="0" id="price-from" min="0">
@@ -115,9 +114,10 @@
       </header>
 
       <section class="hotel-card">
-        <div class="searching-results">
+        <div class="searching-results-wrapper">
         <h2 class="visually-hidden">Результаты поиска</h2>
         <p class="search title">Найдено гостиниц: <span>38</span></p>
+        <div class="control-wrapper">
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
@@ -133,6 +133,7 @@
         <button class="button-light" type="button">
           <span class="visually-hidden">Показать список</span>
         </button>
+        </div>
       </div>
         <ul class="hotel-card-list">
           <li class="hotel-card-item">
@@ -218,6 +219,7 @@
       </section>
     </main>
     <footer class="page-footer">
+      <div class="page-footer-container">
       <section class="footer-social">
         <h2 class="visually-hidden">Соцсети</h2>
         <ul class="footer-social-list">
@@ -244,6 +246,7 @@
       <a class="footer-contacts-img" href="https://htmlacademy.ru/">
         <span class="visually-hidden">Сделано в .html academy</span>
       </a>
+      </div>
     </footer>
     </div>
   </body>
