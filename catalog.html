@@ -9,37 +9,37 @@
 
   <body>
     <div class="main-container">
-    <header class="page-header">
-      <a href="index.html">
-        <img class="logo" src="images/content/main-logo.svg" width="138" height="64" alt="Логотип города Седона.">
-      </a>
-      <nav class="page-navigation">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
-          </li>
-        </ul>
-        </nav>
-        <nav class="user-navigation">
-          <ul class="user-navigation-list">
-            <li class="user-navigation-item">
-              <a href="#" class="navigation-link user-navigation-link"><span class="visually-hidden">Поиск</span></a>
+      <header class="page-header">
+        <a class="link-logo" href="#">
+          <img class="logo" src="images/content/main-logo.svg" width="138" height="64" alt="Логотип города Седона.">
+        </a>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
             </li>
-            <li class="user-navigation-item">
-              <a class="navigation-link user-navigation-link" href="#"><span class="visually-hidden">Избранное</span> <span class="hotels-in-favorites">12</span></a>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">О Седоне</a>
             </li>
-            <li class="user-navigation-item">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Гостиницы</a>
+            </li>
+          </ul>
+          </nav>
+          <nav class="user-navigation"></nav>
+          <ul class="navigation-list user-navigation-list">
+            <li class="navigation-item user-navigation-item">
+              <a class="navigation-link user-navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
+            </li>
+            <li class="navigation-item user-navigation-item">
+              <a class="navigation-link user-navigation-link" href="#"> <span class="visually-hidden">Избранное</span> <span class="hotels-in-favorites">12</span></a>
+            </li>
+            <li class="navigation-item user-navigation-item">
               <button class="button booking-button" type="button">Хочу сюда!</button>
             </li>
           </ul>
         </nav>
-    </header>
+      </header>
     <main class="main-inner">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -101,38 +101,55 @@
               </li>
             </ul>
           </fieldset>
+          <fieldset class="price-form">
+          <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+          <div class="form-settings">
           <label for="price-from">
-            <span class="interval">от:</span>
+            <span class="interval">от</span>
             <input class="price" type="number" name="from" value="0" id="price-from" min="0">
           </label>
           <label for="price-to">
-            <span class="interval">до:</span>
+            <span class="interval">до</span>
             <input class="price" type="number" name="to" value="9000" id="price-to">
           </label>
+          </div>
+        </fieldset>
+        <div class="price-button">
           <button class="button" type="submit">Применить</button>
           <button class="button reset-button" type="reset">Сбросить</button>
+        </div>
         </form>
       </header>
 
       <section class="hotel-card">
-        <div class="searching-results">
+        <div class="searching-results-wrapper">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <p class="search title">Найдено гостиниц: <span>38</span></p>
+        <p class="search-title title">Найдено гостиниц: <span>38</span></p>
+        <div class="control-wrapper">
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
           <option value="rating">По рейтингу</option>
           <option value="location">По расположению</option>
         </select>
-        <button class="button-light" type="button">
+        <ul class="searching-results-list">
+          <li class="searching-results-item">
+        <button class="button-light select-button-light" type="button">
           <span class="visually-hidden">Показать таблицу</span>
         </button>
+        </li>
+        <li class="searching-results-item">
         <button class="button-light" type="button">
           <span class="visually-hidden">Показать карточки</span>
         </button>
+        </li>
+        <li class="searching-results-item">
         <button class="button-light" type="button">
           <span class="visually-hidden">Показать список</span>
         </button>
+        </li>
+        </ul>
+        </div>
       </div>
         <ul class="hotel-card-list">
           <li class="hotel-card-item">
@@ -206,8 +223,8 @@
         </ol>
       </section>
       <section class="subscribe inner-subscribe">
-        <h2 class="title">Подпишитесь на рассылку</h2>
-        <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <h2 class="title subscribe-title">Подпишитесь на рассылку</h2>
+        <p class="subtitle subscribe-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="email">
             <span>Ваш e-mail</span>
