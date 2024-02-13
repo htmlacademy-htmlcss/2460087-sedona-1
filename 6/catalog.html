@@ -26,6 +26,8 @@
               <a class="navigation-link" href="#">Гостиницы</a>
             </li>
           </ul>
+          </nav>
+          <nav class="user-navigation"></nav>
           <ul class="navigation-list user-navigation-list">
             <li class="navigation-item user-navigation-item">
               <a class="navigation-link user-navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
@@ -102,6 +104,7 @@
           </fieldset>
           <fieldset class="price-form">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+          <div class="form-settings">
           <label for="price-from">
             <span class="interval">от</span>
             <input class="price" type="number" name="from" value="0" id="price-from" min="0">
@@ -110,6 +113,7 @@
             <span class="interval">до</span>
             <input class="price" type="number" name="to" value="9000" id="price-to">
           </label>
+          </div>
         </fieldset>
         <div class="price-button">
           <button class="button" type="submit">Применить</button>
@@ -129,15 +133,23 @@
           <option value="rating">По рейтингу</option>
           <option value="location">По расположению</option>
         </select>
+        <ul class="searching-results-list">
+          <li class="searching-results-item">
         <button class="button-light select-button-light" type="button">
           <span class="visually-hidden">Показать таблицу</span>
         </button>
+        </li>
+        <li class="searching-results-item">
         <button class="button-light" type="button">
           <span class="visually-hidden">Показать карточки</span>
         </button>
+        </li>
+        <li class="searching-results-item">
         <button class="button-light" type="button">
           <span class="visually-hidden">Показать список</span>
         </button>
+        </li>
+        </ul>
         </div>
       </div>
         <ul class="hotel-card-list">
