@@ -587,16 +587,20 @@ justify-content: center;
   border: 1px solid #e6e6e6;
   display: grid;
   grid-template-columns: repeat(2, 140px);
-  gap: 16px 20px;
   justify-content: space-between;
   padding: 20px;
+  row-gap: 16px;
+  column-gap: 20px;
+}
+
+.hotel-card-link {
+  grid-column: 1 / -1;
 }
 
 .hotel-card-image {
   width: 300px;
   height: 212px;
   object-fit: contain;
-  grid-column: 1 / -1;
 }
 
 .hotel-card-title {
@@ -615,10 +619,16 @@ justify-content: center;
   background-color: #f2f2f2;
   border-radius: 4px;
   padding: 9px 23px 8px 22px;
+  margin: 0;
 }
 
 .hotel-card-price {
   justify-self: end;
+  margin: 0;
+}
+
+.hotel-card-type {
+  margin: 0;
 }
 
 /* Pagination */
