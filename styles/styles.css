@@ -18,7 +18,7 @@
 
 :root {
   --main-color: #ffffff;
-  --acent-color: #82b3d3;
+  --accent-color: #82b3d3;
   --secondary-color: rgba(131, 179, 211, 0.12);
   --substrate-color: #708c9e;
 }
@@ -80,7 +80,7 @@ body {
 /* Button */
 
 .button {
-  background-color: var(--acent-color);
+  background-color: var(--accent-color);
   font: inherit;
   color: var(--main-color);
   font-size: 16px;
@@ -280,7 +280,7 @@ justify-content: center;
 }
 
 .advantages-item-accent {
-  background-color: var(--acent-color);
+  background-color: var(--accent-color);
   color: #ffffff;
   grid-column: span 3;
   display: grid;
@@ -649,7 +649,7 @@ justify-content: center;
 }
 
 .pagination-link {
-background-color: var(--acent-color);
+background-color: var(--accent-color);
 color: #ffffff;
 font-size: 20px;
 font-weight: 700;
