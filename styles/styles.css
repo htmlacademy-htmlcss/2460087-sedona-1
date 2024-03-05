@@ -104,12 +104,6 @@ body {
   color: rgba(255, 255, 255, 0.3);
  }
 
-.button:disabled {
-  background-color: #e5e5e5;
-  color: var(--main-color);
-  cursor: not-allowed;
- }
-
 .booking-button {
 background-color: #756157;
 }
@@ -144,10 +138,6 @@ background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
 }
 
-.reset-button:disabled {
-  opacity: 0.1;
-}
-
 .selected-button {
   background-color: #7db54f;
 }
@@ -161,7 +151,19 @@ background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
 }
 
+.reset-button:disabled,
+.reset-button:disabled:hover {
+  background-color: transparent;
+  cursor: not-allowed;
+  opacity: 0.1;
+}
 
+.button:disabled,
+.button:disabled:hover {
+  background-color: #e5e5e5;
+  color: var(--main-color);
+  cursor: not-allowed;
+ }
 
 /* Text */
 
@@ -620,27 +622,33 @@ padding-bottom: 30px;
   background-color:  #f2f2f2;
 }
 
-.input-field:hover,
-.input-field:focus {
+.input-field:hover {
   background-color: #e6e6e6;
 }
 
-.input-field:not(:placeholder-shown),
-.input-field:focus:not(:placeholder-shown) {
+.input-field:focus-within {
   background-color: #f2f2f2;
+  border: 2px solid #000000;
+}
+
+.inner-subscribe .input-field:focus-within  {
+  background-color: #dfdfdf;
+  border: 2px solid #000000;
 }
 
 .input-field:not(:focus):not(:placeholder-shown) {
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 
-.inner-subscribe .input-field:not(:placeholder-shown),
-.inner-subscribe .input-field:focus:not(:placeholder-shown)  {
+.inner-subscribe .input-field:not(:focus):not(:placeholder-shown) {
   background-color: #dfdfdf;
 }
 
-.input-field:not(:focus):not(:placeholder-shown) {
-  background-color: #f2f2f2;
+.input-field:disabled,
+.input-field:disabled:hover {
+  background-color: #e5e5e5;
+  color: var(--main-color);
+  cursor: not-allowed;
 }
 
 /* Inner Header */
@@ -723,6 +731,8 @@ padding-bottom: 30px;
   top: 0;
 }
 
+/* Checkbox & Radio */
+
 .catalog-filter {
   display: flex;
   flex-wrap: wrap;
@@ -732,6 +742,9 @@ padding-bottom: 30px;
 
 .catalog-filter-group {
   border-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .catalog-filter-group:nth-of-type(2) {
@@ -742,13 +755,7 @@ padding-bottom: 30px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  padding-bottom: 32px;
-}
-
-.catalog-filter-item {
-  line-height: 23px;
-  list-style: none;
-  margin: 0;
+  margin-bottom: 32px;
 }
 
 .catalog-filter-list {
@@ -757,15 +764,74 @@ padding-bottom: 30px;
   margin: 0;
 }
 
-.control-input {
-  font: inherit;
+.catalog-filter-item {
+  line-height: 23px;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
-.interval {
-  line-height: 24px;
-  color: #000000;
-  position: absolute;
+.control {
+  position: relative;
+  display: block;
 }
+
+.control-mark {
+  position: absolute;
+  background: var(--main-color);
+  top: 5%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-label {
+margin: 26px;
+}
+
+.control-input {
+  width: 100%;
+  height: 100%;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 13px;
+  height: 11px;
+  background-image: url("../images/decorative/filter/checked.svg");
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+}
+
+/* Price form */
 
 .form-settings {
   display: flex;
@@ -774,9 +840,16 @@ padding-bottom: 30px;
   width: 288px;
 }
 
-.price-form {
- border-style: none;
+.form-wrapper {
+  display: flex;
+  gap: 2px;
 }
+
+.price-form {
+  border-style: none;
+  margin: 0;
+  padding: 0;
+ }
 
 .price {
   font: inherit;
@@ -787,6 +860,40 @@ padding-bottom: 30px;
   padding: 12px 20px 12px 20px;
   border-radius: 4px 0 0 4px;
   border-style: none;
+  cursor: pointer;
+  -moz-appearance: textfield;
+}
+
+.price-reverse {
+  border-radius: 0 4px 4px 0;
+}
+
+.price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.price:hover {
+background-color: #e6e6e6;
+}
+
+.price:focus-within {
+  background-color: #e6e6e6;
+  border: 2px solid #000000;
+}
+
+.price:disabled,
+.price:disabled:hover {
+  background-color: #e5e5e5;
+  color: var(--main-color);
+  cursor: not-allowed;
+}
+
+.interval {
+  position: relative;
+  color: #000000;
+  top: 50%;
+  left: 106px;
+  opacity: 0.3;
 }
 
 .price-button {
@@ -796,6 +903,57 @@ padding-bottom: 30px;
   gap: 32px;
   align-self: flex-end;
 }
+
+/* Range bar */
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 36px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: var(--main-color);
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  top: -8px;
+}
+
+.toggle-min {
+left: 0;
+}
+
+.toggle-max {
+left: 206px;
+}
+
+.range-toggle:hover,
+.range-toggle:focus {
+  background-color: #f2f2f2;
+}
+
+.range-toggle:active {
+  background-color: #e5e5e5;
+}
+
+.range-toggle:disabled,
+.range-toggle:disabled:hover {
+  background-color: #e5e5e5;
+  color: var(--main-color);
+  cursor: not-allowed;
+}
+
 
 /* Hotel card */
 
@@ -812,6 +970,7 @@ padding-bottom: 30px;
 .select-control {
   font: inherit;
   background-color: var(--main-color);
+  color: #000000;
   width: 292px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
@@ -820,16 +979,24 @@ padding-bottom: 30px;
   background-image: url("../images/decorative/searching-results/sort.svg");
   background-position: right 20px center;
   background-repeat: no-repeat;
+  cursor: pointer;
  }
 
  .select-control:hover,
  .select-control:focus {
-  background-color: #e6e6Ee;
+  border: 2px solid #68a2ca;
  }
 
- .select-control:active {
-  background-color: #f2f2f2;
+ .select-control:focus-within {
+  border: 2px solid #3f5e72;
  }
+
+ .select-control:disabled,
+ .select-control:disabled:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
+  }
 
  .searching-results-list {
   list-style: none;
