@@ -210,6 +210,7 @@ body {
   width: 138px;
   height: 70px;
   margin-bottom: -6px;
+  align-self: flex-start;
 }
 
 .link-logo:hover,
@@ -290,6 +291,7 @@ body {
   margin: 0;
   padding: 0;
   align-items: center;
+  min-width: 268px;
 }
 
 .user-navigation-link {
@@ -420,18 +422,25 @@ body {
   transform: translateX(-50%);
 }
 
-.advantages-image {
-  display: block;
-  width: 800px;
-  height: 385px;
-}
-
 .advantages-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.advantages-image {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.advantages-image-wrapper {
+  width: 800px;
+  height: auto;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .advantages-item:not(.advantages-item-accent) {
@@ -599,8 +608,10 @@ body {
 
 .subscribe-form {
   display: flex;
+  width: 684px;
   text-align: center;
-  width: 681px;
+  flex-wrap: wrap;
+  row-gap: 15px;
   margin: 0 auto;
 }
 
@@ -940,19 +951,19 @@ body {
 }
 
 .range-toggle:hover {
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:focus {
   border: 3px solid #83b3d3;
   border-radius: 5px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .range-tootle:active {
   border: 2px solid #83b3d3;
   border-radius: 5px;
-  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
 .range-toggle:disabled,
@@ -1234,7 +1245,7 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 160px;
   margin: 0;
   padding: 0;
 }
@@ -1247,6 +1258,7 @@ body {
 
 .footer-contacts-image {
   fill: #83B3D3;
+  align-items: center;
 }
 
 .footer-contacts-link:hover .footer-contacts-image,
@@ -1266,6 +1278,7 @@ body {
   line-height: 40px;
   text-decoration: none;
   cursor: pointer;
+  display: block;
 }
 
 .footer-phone:hover,
@@ -1279,6 +1292,7 @@ body {
 
 .logo-academy {
   fill: #000000;
+  justify-content: flex-end;
 }
 
 .footer-contacts-link:hover .logo-academy,
@@ -1305,7 +1319,8 @@ body {
   align-items: center;
 }
 
-/* Закрывает модальное окно}*/
+/* Закрывает модальное окно */
+
 .modal-window-close {
   display: none;
 }
